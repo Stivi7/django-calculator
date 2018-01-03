@@ -1,0 +1,19 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    <h1>Calculator</h1>
+    <div>
+        <form action="{% url 'calculate' %}" method="post">
+            {% csrf_token %}
+            <input name="numField" type="text" />
+            <button type="submit">Equals</button>
+        </form>
+    </div>
+    <div id="result">
+        {{ result }}
+    </div>
+    </body>
+</html>
